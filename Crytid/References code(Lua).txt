@@ -1,0 +1,1095 @@
+----#include \Cryptid\Data.ttslua
+CLUE_DATA =
+{
+    {name = '숲이나 사막에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'F', value2 = 'D'},
+    {name = '숲이나 물에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'F', value2 = 'W'},
+    {name = '숲이나 늪에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'F', value2 = 'S'},
+    {name = '숲이나 산에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'F', value2 = 'M'},
+    {name = '사막이나 물에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'D', value2 = 'W'},
+    {name = '사막이나 늪에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'D', value2 = 'S'},
+    {name = '사막이나 산에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'D', value2 = 'M'},
+    {name = '물이나 늪에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'W', value2 = 'S'},
+    {name = '물이나 산에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'W', value2 = 'M'},
+    {name = '늪이나 산에 있음', distance = 0, type = 'terrain', inverse = false, value1 = 'S', value2 = 'M'},
+    {name = '숲으로부터 1칸 이내에 있음', distance = 1, type = 'terrain', inverse = false, value1 = 'F', value2 = nil},
+    {name = '사막으로부터 1칸 이내에 있음', distance = 1, type = 'terrain', inverse = false, value1 = 'D', value2 = nil},
+    {name = '늪으로부터 1칸 이내에 있음', distance = 1, type = 'terrain', inverse = false, value1 = 'S', value2 = nil},
+    {name = '산으로부터 1칸 이내에 있음', distance = 1, type = 'terrain', inverse = false, value1 = 'M', value2 = nil},
+    {name = '물으로부터 1칸 이내에 있음', distance = 1, type = 'terrain', inverse = false, value1 = 'W', value2 = nil},
+    {name = '곰 혹은 쿠거 서식지로부터 1칸 이내에 있음', distance = 1, type = 'animal', inverse = false, value1 = 'B', value2 = 'C'},
+    {name = '석상으로부터 2칸 이내에 있음', distance = 2, type = 'structType', inverse = false, value1 = 'O', value2 = nil},
+    {name = '버려진 오두막으로부터 2칸 이내에 있음', distance = 2, type = 'structType', inverse = false, value1 = 'T', value2 = nil},
+    {name = '곰 서식지로부터 2칸 이내에 있음', distance = 2, type = 'animal', inverse = false, value1 = 'B', value2 = nil},
+    {name = '쿠거 서식지로부터 2칸 이내에 있음', distance = 2, type = 'animal', inverse = false, value1 = 'C', value2 = nil},
+    {name = '하양 건축물로부터 3칸 이내에 있음', distance = 3, type = 'structColor', inverse = false, value1 = 'W', value2 = nil},
+    {name = '파란 건축물로부터 3칸 이내에 있음', distance = 3, type = 'structColor', inverse = false, value1 = 'B', value2 = nil},
+    {name = '초록 건축물로부터 3칸 이내에 있음', distance = 3, type = 'structColor', inverse = false, value1 = 'G', value2 = nil},
+    {name = '검정 건축물로부터 3칸 이내에 있음', distance = 3, type = 'structColor', inverse = false, value1 = 'D', value2 = nil},
+    {name = '숲이나 사막에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'F', value2 = 'D'},
+    {name = '숲이나 물에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'F', value2 = 'W'},
+    {name = '숲이나 늪에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'F', value2 = 'S'},
+    {name = '숲이나 산에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'F', value2 = 'M'},
+    {name = '사막이나 물에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'D', value2 = 'W'},
+    {name = '사막이나 늪에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'D', value2 = 'S'},
+    {name = '사막이나 산에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'D', value2 = 'M'},
+    {name = '물이나 늪에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'W', value2 = 'S'},
+    {name = '물이나 산에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'W', value2 = 'M'},
+    {name = '늪이나 산에 없음', distance = 0, type = 'terrain', inverse = true, numValues = 2, value1 = 'S', value2 = 'M'},
+    {name = '숲으로부터 1칸 이내에 없음', distance = 1, type = 'terrain', inverse = true, numValues = 2, value1 = 'F', value2 = nil},
+    {name = '사막으로부터 1칸 이내에 없음', distance = 1, type = 'terrain', inverse = true, numValues = 2, value1 = 'D', value2 = nil},
+    {name = '늪으로부터 1칸 이내에 없음', distance = 1, type = 'terrain', inverse = true, numValues = 1, value1 = 'S', value2 = nil},
+    {name = '산으로부터 1칸 이내에 없음', distance = 1, type = 'terrain', inverse = true, numValues = 1, value1 = 'M', value2 = nil},
+    {name = '물으로부터 1칸 이내에 없음', distance = 1, type = 'terrain', inverse = true, numValues = 1, value1 = 'W', value2 = nil},
+    {name = '곰 혹은 쿠거 서식지로부터 1칸 이내에 없음', distance = 1, type = 'animal', inverse = true, numValues = 2, value1 = 'B', value2 = 'C'},
+    {name = '석상으로부터 2칸 이내에 없음', distance = 2, type = 'structType', inverse = true, numValues = 1, value1 = 'O', value2 = nil},
+    {name = '버려진 오두막으로부터 2칸 이내에 없음', distance = 2, type = 'structType', inverse = true, numValues = 1, value1 = 'T', value2 = nil},
+    {name = '곰 서식지로부터 2칸 이내에 없음', distance = 2, type = 'animal', inverse = true, numValues = 1, value1 = 'B', value2 = nil},
+    {name = '쿠거 서식지로부터 2칸 이내에 없음', distance = 2, type = 'animal', inverse = true, numValues = 1, value1 = 'C', value2 = nil},
+    {name = '하양 건축물로부터 3칸 이내에 없음', distance = 3, type = 'structColor', inverse = true, numValues = 1, value1 = 'W', value2 = nil},
+    {name = '파란 건축물로부터 3칸 이내에 없음', distance = 3, type = 'structColor', inverse = true, numValues = 1, value1 = 'B', value2 = nil},
+    {name = '초록 건축물로부터 3칸 이내에 없음', distance = 3, type = 'structColor', inverse = true, numValues = 1, value1 = 'G', value2 = nil},
+    {name = '검정 건축물로부터 3칸 이내에 없음', distance = 3, type = 'structColor', inverse = true, numValues = 1, value1 = 'D', value2 = nil},
+}
+
+MAP =
+{
+    {'W','S','S', 'W','S','S', 'W','W','D', 'W','D','D', 'F','F','D', 'F','F','F',},
+    {'S','S','S', 'F','S','M', 'F','F','M', 'F','D','M', 'F','D','M', 'F','D','D',},
+    {'S','S','M', 'S','S','M', 'F','F','M', 'F','M','M', 'F','W','W', 'W','W','W',},
+    {'D','D','D', 'D','D','D', 'M','M','D', 'M','W','F', 'M','W','F', 'M','W','F',},
+    {'S','S','D', 'S','D','D', 'S','D','W', 'M','W','W', 'M','M','W', 'M','M','W',},
+    {'D','M','M', 'D','M','W', 'S','S','W', 'S','S','W', 'S','F','W', 'F','F','F',},
+}
+
+BEAR =
+{
+    {0,0,0, 0,0,0, 0,0,0, 0,0,1, 0,0,1, 0,0,1,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,1, 0,1,1,},
+    {1,1,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+}
+
+COUGAR =
+{
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {1,0,0, 1,0,0, 1,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {0,1,1, 0,1,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,1,1,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+    {0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,},
+}
+
+----#include \Cryptid\Data.ttslua
+----#include \Cryptid\Global.ttslua
+--[[
+Cryptid
+Scripted by Sionar
+--]]
+
+
+------------------Constants
+MOD_NAME = 'Cryptid'
+VERSION = '1.8.3'
+DEBUG = true
+START_MESSAGE = '[FF4040]Cryptid[-]\nVersion [00FF00]' .. VERSION..'[-]\nScripted by [49D5FD]Sionar[-]\n'
+COLORS = {'Red', 'Teal', 'Purple', 'Brown', 'Pink',}
+COLORS_ALL = {'Red', 'Teal', 'Purple', 'Brown', 'Pink', 'Black', 'Grey'}
+TAGS = {Red = 'r', Teal = 't', Purple = 'p', Brown = 'b', Pink = 'k', Black = 'l', Grey = 'y'}
+COLOR_DARK = '#303030'
+MAP_POS =
+{
+    {-6.89, 1.11, 7.89},
+    {6.89, 1.11, 7.89},
+    {-6.89, 1.11, 0.00},
+    {6.89, 1.11, 0.00},
+    {-6.89, 1.11, -7.89},
+    {6.89, 1.11, -7.89},
+}
+MARKER_POS =
+{
+    Red = {0,1,-20},
+    Teal = {-19.02,1,-6.18},
+    Purple = {-11.76,1,16.18},
+    Brown = {11.76,1,16.18},
+    Pink = {19.02,1,-6.18},
+}
+
+GRID_X_START = -12.68
+GRID_Z_START = 11.32
+GRID_X_SPACING = 2.3
+GRID_Z_SPACING = -2.65
+GRID_X = {}
+GRID_Z = {}
+for i = 1,12 do
+    GRID_X[i] = GRID_X_START + (i-1) * GRID_X_SPACING
+end
+for i = 1,9 do
+    GRID_Z[i] = GRID_Z_START + (i-1) * GRID_Z_SPACING
+end
+VALID_HEXES = {}
+for x = 1,12 do
+    VALID_HEXES[x] = {}
+    for y = 1,9 do
+        VALID_HEXES[x][y] = {{},{},{},{}}
+        if x%2 == 1 then
+            hexes =
+            {
+                {{x,y},},
+                {{x-1, y-1}, {x-1, y}, {x, y-1}, {x, y+1}, {x+1, y-1}, {x+1, y}},
+                {{x-2, y-1}, {x-2, y}, {x-2, y+1}, {x-1, y-2}, {x-1, y+1}, {x, y-2}, {x, y+2}, {x+1, y-2}, {x+1, y+1}, {x+2, y-1}, {x+2, y}, {x+2, y+1},},
+                {{x-3, y-2}, {x-3, y-1}, {x-3, y}, {x-3, y+1}, {x-2, y-2}, {x-2, y+2}, {x-1, y-3}, {x-1, y+2}, {x,y-3}, {x,y+3}, {x+1,y-3}, {x+1,y+2}, {x+2,y-2}, {x+2,y+2}, {x+3,y-2}, {x+3,y-1}, {x+3,y}, {x+3,y+1},},
+            }
+        else
+            hexes =
+            {
+                {{x,y},},
+                {{x-1, y}, {x-1, y+1}, {x, y-1}, {x, y+1}, {x+1, y}, {x+1, y+1}},
+                {{x-2, y-1}, {x-2, y}, {x-2, y+1}, {x-1, y-1}, {x-1, y+2}, {x, y-2}, {x, y+2}, {x+1, y-1}, {x+1, y+2}, {x+2, y-1}, {x+2, y}, {x+2, y+1},},
+                {{x-3, y-1}, {x-3, y}, {x-3, y+1}, {x-3, y+2}, {x-2, y-2}, {x-2, y+2}, {x-1, y-2}, {x-1, y+3}, {x,y-3}, {x,y+3}, {x+1,y-2}, {x+1,y+3}, {x+2,y-2}, {x+2,y+2}, {x+3,y-1}, {x+3,y}, {x+3,y+1}, {x+3,y+2},},
+            }
+        end
+        for i = 1, 4 do
+            for k,v in pairs(hexes[i]) do
+                if v[1] >= 1 and v[1] <= 12 and v[2] >= 1 and v[2] <= 9 then
+                    for j = i, 4 do
+                        table.insert(VALID_HEXES[x][y][j], v)
+                    end
+                end
+            end
+        end
+    end
+end
+
+TABLE_GUID = 'e1c8f6'
+SIDE_TABLE_GUID = '2e72cd'
+MAP_GUIDS = {'a70047', '0137df', '38ad67', '7b30ec', '31e825', '81e81d',}
+STRUCTURE_GUIDS = {OW = '127a87', TW = 'ba505c', OB = '0df954', TB = 'a1a56c', OG = '096c34', TG = '0add33', OD = '6019a2', TD = '62ecde',}
+BAG_GUIDS = {Red = {'db017c','a46d6a'}, Teal = {'699c89','eef40a'}, Purple = {'2c47b4','9b5f69'}, Brown = {'ce8508','1f954d'}, Pink = {'37c717','ad678d'}}
+MARKER_GUID = 'a17c99'
+HELPER_GUIDS = {Red = '94f3ee', Teal = '864860', Purple = '9bc4dc', Brown = 'db9e6b', Pink = '4a9d68'}
+TIMER_GUID = 'f74b73'
+
+
+------------------Variables
+players = {}
+seatedPlayers = {}
+started = false
+mode = 'normal'
+twoPlayers = false
+checklists = {}
+data = {}
+map = {}
+clues = {}
+cluesTable = {}
+dataAll = {}
+mapAll = {}
+cluesAll = {}
+cluesTableAll = {}
+
+for k,v in pairs(COLORS_ALL) do
+    checklists[v] = {}
+    for i = 1,24 do
+        checklists[v][i] = {}
+        for k1,v1 in pairs(COLORS) do
+            checklists[v][i][TAGS[v1]] = 1
+        end
+    end
+end
+for i = 1,12 do
+    map[i] = {}
+    for j = 1,9 do
+        map[i][j] = {}
+    end
+end
+
+
+------------------Functions
+function onLoad(saveString)
+    if not (saveString == '') then
+        local save = JSON.decode(saveString)
+        players = save['p']
+        seatedPlayers = save['sp']
+        started = save['s']
+        mode = save['mo']
+        checklists = save['c']
+        map = save['ma']
+        twoPlayers = save['t']
+    end
+    setNotes(START_MESSAGE)
+    math.randomseed(os.time())
+    local seated = getSeatedPlayers()
+    local found = false
+
+    local obj
+    obj = getObjectFromGUID(TABLE_GUID)
+    if obj then
+        obj.interactable = false
+    end
+    obj = getObjectFromGUID(SIDE_TABLE_GUID)
+    if obj then
+        obj.interactable = false
+    end
+
+    obj = getObjectFromGUID(MARKER_GUID)
+    if not started then
+        obj.interactable = false
+    end
+
+    for k,v in pairs(MAP_GUIDS) do
+        obj = getObjectFromGUID(v)
+        if obj then
+            obj.interactable = false
+        end
+    end
+
+    for k,v in pairs(STRUCTURE_GUIDS) do
+        obj = getObjectFromGUID(v)
+        if obj then
+            obj.interactable = false
+        end
+    end
+
+    obj = getObjectFromGUID(TABLE_GUID)
+    if not started then
+        obj.createButton({
+            label = '보통 게임\n시작',
+            click_function = 'startNormalGame',
+            function_owner = Global,
+            position = {0,0.1,3},
+            rotation = {0,180,0},
+            width = 2500,
+            height = 1000,
+            font_size = 300,
+            color = {0,0,0,1},
+            font_color = 'White',
+            tooltip = '보통 게임을 시작합니다.',
+        })
+        obj.createButton({
+            label = '어려움 게임\n시작',
+            click_function = 'startAdvancedGame',
+            function_owner = Global,
+            position = {0,0.1,-3},
+            rotation = {0,180,0},
+            width = 2500,
+            height = 1000,
+            font_size = 300,
+            color = {0,0,0,1},
+            font_color = 'White',
+            tooltip = '어려움 게임을 시작합니다.',
+        })
+    else
+        obj.createButton({
+            label = '모든 단서\n공개',
+            click_function = 'revealClues',
+            function_owner = Global,
+            position = {0,0.1,17},
+            rotation = {0,180,0},
+            width = 2500,
+            height = 1000,
+            font_size = 300,
+            color = {0,0,0,1},
+            font_color = 'White',
+            tooltip = '모든 단서를 공개합니다.',
+        })
+        setClues()
+    end
+    setUI()
+    if not started then
+        generateAllClues()
+        Turns.enable = false
+        for k,v in pairs(seated) do
+            found = false
+            for k1,v1 in pairs(COLORS) do
+                if v1 == v then
+                    found = true
+                end
+            end
+            if not found then
+                Player[v].changeColor('Grey')
+            end
+        end
+    else
+        adjustChecklist()
+        generateMapUI()
+        cluesTable = findValidClues()
+    end
+end
+
+function onSave()
+    local save = {}
+    save['p'] = players
+    save['sp'] = seatedPlayers
+    save['s'] = started
+    save['mo'] = mode
+    save['c'] = checklists
+    save['ma'] = map
+    save['t'] = twoPlayers
+    local saveString = JSON.encode(save)
+    return saveString
+end
+
+function onPlayerChangeColor(playerColor)
+    if started then
+        setClues()
+    end
+end
+
+function onPlayerTurn(player)
+    if player.color == '' then
+        return
+    end
+    local obj = getObjectFromGUID(MARKER_GUID)
+    if obj then
+        obj.setColorTint(stringColorToRGB(player.color))
+        obj.setPositionSmooth(MARKER_POS[player.color])
+        obj.interactable = true
+        obj.setLock(false)
+    end
+    local obj = getObjectFromGUID(TIMER_GUID)
+    if obj then
+        obj.call('time3m')
+    end
+end
+
+function startNormalGame(clickedObject, playerColor)
+    if not Player[playerColor].admin then
+        return
+    end
+    local seated = getSeatedPlayers()
+    if #seated == 1 and not DEBUG then
+        Player[playerColor].print('You need 2 players seated to start the game.')
+        return
+    end
+    mode = 'normal'
+    startGame()
+end
+
+function startAdvancedGame(clickedObject, playerColor)
+    if not Player[playerColor].admin then
+        return
+    end
+    local seated= getSeatedPlayers()
+    if #seated == 1 and not DEBUG then
+        Player[playerColor].print('You need 2 players seated to start the game.')
+        return
+    end
+    mode = 'advanced'
+    startGame()
+end
+
+function startGame()
+    local obj, cluesFound
+    local xPos, yPos, zPos, index
+    local startColor, colors, tempColor, tempEntry
+    local distances = {}
+
+    seatedPlayers = getSeatedPlayers()
+
+    if #seatedPlayers < 2 then
+        broadcastToAll('You need two players seated to start the game.', {1,0,0})
+        return
+    end
+
+    if #seatedPlayers == 2 then
+        setTwoPlayerMode()
+    end
+    started = true
+    obj = getObjectFromGUID(TABLE_GUID)
+    obj.clearButtons()
+    obj.createButton({
+        label = '모든 단서\n공개',
+        click_function = 'revealClues',
+        function_owner = Global,
+        position = {0,0.1,17},
+        rotation = {0,180,0},
+        width = 2500,
+        height = 1000,
+        font_size = 300,
+        color = {0,0,0,1},
+        font_color = 'White',
+        tooltip = '모든 단서를 공개합니다.',
+    })
+
+    data = dataAll[mode .. #seatedPlayers]
+    map = mapAll[mode .. #seatedPlayers]
+    clues = cluesAll[mode .. #seatedPlayers]
+    cluesTable = cluesTableAll[mode .. #seatedPlayers]
+
+    index = 1
+    players = {}
+    for k,v in pairs(seatedPlayers) do
+        players[v] = {clue = clues[index]}
+        index = index + 1
+    end
+    if twoPlayers then
+        for i = 1,4 do
+            distances[i] = CLUE_DATA[players[seatedPlayers[i]].clue].distance
+        end
+        if (distances[1] == 0 and distances[3] == 0) or (distances[2] == 0 and distances[4] == 0) then
+            tempEntry = players[seatedPlayers[1]].clue
+            players[seatedPlayers[1]].clue = players[seatedPlayers[2]].clue
+            players[seatedPlayers[2]].clue = tempEntry
+        end
+    end
+    setClues()
+
+    for i = 1,6 do
+        obj = getObjectFromGUID(MAP_GUIDS[data.mapOrder[i]])
+        obj.setPositionSmooth(MAP_POS[i])
+        if data.mapFlip[i] then
+            obj.setRotationSmooth({0,0,0})
+        else
+            obj.setRotationSmooth({0,180,0})
+        end
+    end
+
+    for k,v in pairs(STRUCTURE_GUIDS) do
+        obj = getObjectFromGUID(v)
+        if data.coord[k] ~= nil then
+            if string.sub(k,1,1) == 'T' then
+                yPos = 1.54
+            elseif string.sub(k,1,1) == 'O' then
+                yPos = 1.71
+            end
+            xPos = GRID_X[data.coord[k][1]]
+            zPos = GRID_Z[data.coord[k][2]]
+            if data.coord[k][1] % 2 == 0 then
+                zPos = zPos + GRID_Z_SPACING * 0.5
+            end
+            obj.setPositionSmooth({xPos, yPos, zPos})
+        else
+            obj.destruct()
+        end
+    end
+
+    for k,v in pairs(COLORS) do
+        if players[v] == nil then
+            obj = getObjectFromGUID(BAG_GUIDS[v][1])
+            obj.destruct()
+            obj = getObjectFromGUID(BAG_GUIDS[v][2])
+            obj.destruct()
+        end
+    end
+
+    index = math.random(1,#seatedPlayers)
+    startColor = seatedPlayers[index]
+    index = 1
+    for k,v in pairs(COLORS) do
+        if v == startColor then
+            index = k
+            break
+        end
+    end
+    colors = {}
+    for i = 1, 5 do
+        table.insert(colors, COLORS[(index + i - 2 ) % 5 + 1])
+    end
+    Turns.order = colors
+    Turns.enable = true
+    onPlayerTurn(Player[colors[1]])
+    adjustChecklist()
+    fillChecklist()
+    generateMapUI()
+    for k,v in pairs(seatedPlayers) do
+        resetMap(Player[v], _, _)
+    end
+end
+
+function setTwoPlayerMode()
+    twoPlayers = true
+    for k,v in pairs(COLORS) do
+        if seatedPlayers[1] == v then
+            index = k-1
+            if index == 0 then
+                index = 5
+            end
+            if not Player[COLORS[index]].seated then
+                table.insert(seatedPlayers, COLORS[index])
+            else
+                index = k%5 + 1
+                table.insert(seatedPlayers, COLORS[index])
+            end
+        end
+    end
+    for k,v in pairs(COLORS) do
+        if seatedPlayers[2] == v then
+            index = k-1
+            if index == 0 then
+                index = 5
+            end
+            if not Player[COLORS[index]].seated then
+                table.insert(seatedPlayers, COLORS[index])
+            else
+                index = k%5 + 1
+                table.insert(seatedPlayers, COLORS[index])
+            end
+        end
+    end
+end
+
+function generateRandomMap()
+    local structures = {}
+    local randCoord = {}
+    local match
+    local structures = {'OW', 'TW', 'OB', 'TB', 'OG', 'TG', 'OD', 'TD'}
+    local coords = {}
+
+    data = {}
+    data.mapOrder = shuffleTable({1,2,3,4,5,6})
+    data.mapFlip = {}
+    data.coord = {}
+    for i = 1,6 do
+        if math.random(0,1) == 0 then
+            table.insert(data.mapFlip, false)
+        else
+            table.insert(data.mapFlip, true)
+        end
+    end
+    for i = 1,8 do
+        match = true
+        while match == true do
+            match = false
+            randCoord = {math.random(1,12), math.random(1,9)}
+            for j = 1, i-1 do
+                if randCoord[1] == coords[j][1] and randCoord[2] == coords[j][2] then
+                    match = true
+                end
+            end
+        end
+        table.insert(coords, randCoord)
+    end
+    for i = 1,8 do
+        data.coord[structures[i]] = coords[i]
+    end
+    if mode == 'normal' then
+        data.coord.OD = nil
+        data.coord.TD = nil
+    end
+end
+
+function shuffleTable(array)
+    local currIndex, randIndex, temp
+    currIndex = #array
+
+    while (currIndex ~= 1) do
+        randIndex = math.random(1, currIndex)
+        temp = array[currIndex]
+        array[currIndex] = array[randIndex]
+        array[randIndex] = temp
+        currIndex = currIndex - 1
+    end
+    return array
+end
+
+function populateMap()
+    local first, last, direction, x, y, step, structure
+    local xstart = 1
+    local ystart = 1
+    for i1 = 1,6 do
+        if not data.mapFlip[i1] then
+            first = 1
+            last = 18
+            direction = 1
+        else
+            first = 18
+            last = 1
+            direction = -1
+        end
+        xstart = 1 + 6 * ((i1-1)%2)
+        ystart = 1 + math.floor((i1-1)/2) * 3
+        step = 1
+        for i2 = first, last, direction do
+            x = xstart + math.floor((step-1)/3)
+            y = ystart + (step-1)%3
+            map[x][y].structType = 'N'
+            map[x][y].structColor = 'N'
+            for k1,v1 in pairs(data.coord) do
+                if x == v1[1] and y == v1[2] then
+                    map[x][y].structType = string.sub(k1,1,1)
+                    map[x][y].structColor = string.sub(k1,2,2)
+                end
+            end
+            map[x][y].terrain = MAP[data.mapOrder[i1]][i2]
+            if COUGAR[data.mapOrder[i1]][i2] == 1 then
+                map[x][y].animal = 'C'
+            elseif BEAR[data.mapOrder[i1]][i2] == 1 then
+                map[x][y].animal = 'B'
+            else
+                map[x][y].animal = 'N'
+            end
+            step = step + 1
+        end
+    end
+end
+
+function findValidClues()
+    local validHexes = {}     --distance of 0,1,2,3
+    local distance
+    local value, found
+    local outputTab = {}
+    local map = map
+
+    for i = 1,48 do
+        outputTab[i] = {}
+        for j = 1,108 do
+            outputTab[i][j] = false
+        end
+    end
+
+    for x = 1,12 do
+        for y = 1,9 do
+            validHexes = VALID_HEXES[x][y]
+            for i = 1,24 do
+                found = false
+                distance = CLUE_DATA[i].distance
+                for k,v in pairs(validHexes[distance+1]) do
+                    value = map[v[1]][v[2]][CLUE_DATA[i].type]
+                    if value == CLUE_DATA[i].value1 or value == CLUE_DATA[i].value2 then
+                        found = true
+                        break
+                    end
+                end
+                if found then
+                    outputTab[i][(x-1) * 9 + y] = true
+                    outputTab[i+24][(x-1) * 9 + y] = false
+                else
+                    outputTab[i][(x-1) * 9 + y] = false
+                    outputTab[i+24][(x-1) * 9 + y] = true
+                end
+            end
+        end
+    end
+    return outputTab
+end
+
+function generateClues(numPlayers)
+    local clueMaxIndex, randomClue, numZeroDistClues, validSolution, minClues, minClueIndex
+    local found = false
+    local tries = 0
+    local cluesCount = {}
+    local cluesCopy = {}
+
+    if mode == 'normal' then
+        clueMaxIndex = 23
+    else
+        clueMaxIndex = 48
+    end
+
+    cluesTable = findValidClues()
+    while tries < 10 and not found do
+        numZeroDistClues = 0
+        minClues = 108
+        cluesCopy = Global.getTable('cluesTable')
+        clues = {}
+        table.insert(clues, math.random(1,clueMaxIndex))
+        if CLUE_DATA[clues[1]].distance == 0 then
+            numZeroDistClues = numZeroDistClues + 1
+        end
+        cluesCopy,cluesCount = filterTable(cluesCopy, cluesCopy[clues[1]])
+        if numPlayers == 5 then
+            randomClue = math.random(1,clueMaxIndex)
+            while randomClue == clues[1] or cluesCount[randomClue] == 0 do
+                randomClue = math.random(1,clueMaxIndex)
+            end
+            table.insert(clues, randomClue)
+            if CLUE_DATA[clues[2]].distance == 0 then
+                numZeroDistClues = numZeroDistClues + 1
+            end
+            cluesCopy,cluesCount = filterTable(cluesCopy, cluesCopy[clues[2]])
+        end
+        if numPlayers >= 4 then
+            randomClue = math.random(1,clueMaxIndex)
+            while randomClue == clues[1] or randomClue == clues[#clues] or cluesCount[randomClue] == 0 or (numZeroDistClues == 2 and CLUE_DATA[randomClue].distance == 0) do
+                randomClue = math.random(1,clueMaxIndex)
+            end
+            table.insert(clues, randomClue)
+            if CLUE_DATA[clues[#clues]].distance == 0 then
+                numZeroDistClues = numZeroDistClues + 1
+            end
+            cluesCopy,cluesCount = filterTable(cluesCopy, cluesCopy[clues[#clues]])
+        end
+        for i = 1,clueMaxIndex do
+            if cluesCount[i] < minClues and cluesCount[i] > 1 and not (numZeroDistClues == 2 and CLUE_DATA[i].distance == 0) then
+                minClues = cluesCount[i]
+                minClueIndex = i
+            end
+        end
+        table.insert(clues, minClueIndex)
+        if CLUE_DATA[clues[#clues]].distance == 0 then
+            numZeroDistClues = numZeroDistClues + 1
+        end
+        cluesCopy,cluesCount = filterTable(cluesCopy, cluesCopy[clues[#clues]])
+        for i = 1,clueMaxIndex do
+            if cluesCount[i] == 1 and not (numZeroDistClues == 2 and CLUE_DATA[i].distance == 0) then
+                table.insert(clues, i)
+                found = true
+                break
+            end
+        end
+        if found and numPlayers > 3 then
+            validSolution = checkSolution()
+            if not validSolution then
+                found = false
+            end
+        end
+        tries = tries + 1
+    end
+    return found
+end
+
+function filterTable(tab, entries)
+    local cluesCount = {}
+    local clueMaxIndex
+
+    if mode == 'normal' then
+        clueMaxIndex = 23
+    else
+        clueMaxIndex = 48
+    end
+
+    for i = 1, clueMaxIndex do
+        cluesCount[i] = 0
+        for j = 1, 108 do
+            tab[i][j] = tab[i][j] and entries[j]
+            if tab[i][j] == true then
+                cluesCount[i] = cluesCount[i] + 1
+            end
+        end
+    end
+    return tab, cluesCount
+end
+
+function checkSolution()
+    local cluesCopy, cluesIndexes, cluesCount
+    for i = 1, #clues do
+        cluesIndexes = {}
+        cluesCopy = Global.getTable('cluesTable')
+        for j = 1, #clues do
+            if j ~= i then
+                table.insert(cluesIndexes,j)
+            end
+        end
+        for k,v in pairs(cluesIndexes) do
+            cluesCopy,cluesCount = filterTable(cluesCopy, cluesCopy[clues[v]])
+        end
+        for k,v in pairs(cluesIndexes) do
+        end
+        if cluesCount[clues[cluesIndexes[1]]] == 1 then
+            return false
+        end
+    end
+
+    for i = 1, #clues do
+        for j = i+1, #clues do
+            if clues[i] == clues[j] then
+                return false
+            end
+        end
+    end
+    return true
+end
+
+function generateAllClues()
+    local cluesFound
+    for i = 3,5 do
+        mode = 'normal'
+        cluesFound = false
+        while cluesFound == false do
+            generateRandomMap()
+            populateMap()
+            cluesFound = generateClues(i)
+        end
+        clues = shuffleTable(clues)
+        cluesAll[mode..i] = Global.getTable('clues')
+        cluesTableAll[mode..i] = Global.getTable('cluesTable')
+        dataAll[mode..i] = Global.getTable('data')
+        mapAll[mode..i] = Global.getTable('map')
+
+        mode = 'advanced'
+        cluesFound = false
+        while cluesFound == false do
+            generateRandomMap()
+            populateMap()
+            cluesFound = generateClues(i)
+        end
+        clues = shuffleTable(clues)
+        cluesAll[mode..i] = Global.getTable('clues')
+        cluesTableAll[mode..i] = Global.getTable('cluesTable')
+        dataAll[mode..i] = Global.getTable('data')
+        mapAll[mode..i] = Global.getTable('map')
+    end
+end
+
+function setClues()
+    local obj = getObjectFromGUID(TABLE_GUID)
+    for k,v in pairs(players) do
+        obj.UI.setAttribute(k..'Clue', 'active', 'true' )
+        obj.UI.setValue(k..'Clue', CLUE_DATA[v.clue].name)
+    end
+    if twoPlayers then
+        obj.UI.setAttribute(seatedPlayers[3]..'Clue', 'visibility', seatedPlayers[1])
+        obj.UI.setAttribute(seatedPlayers[4]..'Clue', 'visibility', seatedPlayers[2])
+    end
+end
+
+function revealClues(clickedObject, playerColor)
+    if not Player[playerColor].admin then
+        return
+    end
+    local obj = getObjectFromGUID(TABLE_GUID)
+    for k,v in pairs(players) do
+        obj.UI.setAttribute(k..'Clue', 'visibility', '' )
+    end
+end
+
+function toggleChecklist(player, value, id)
+    local visible = UI.getAttribute(player.color .. 'Table', 'active')
+    if visible == 'true' then
+        UI.setAttribute(player.color .. 'Table', 'active', 'false')
+    else
+        UI.setAttribute(player.color .. 'Table', 'active', 'true')
+    end
+end
+
+function buttonState(player, value, id)
+    local color = string.sub(id,2,2)
+    local clue = tonumber(string.sub(id,3,string.len(id)))
+    local currentState = checklists[player.color][clue][color]
+    local buttonColor, text
+
+    if mode == 'normal' and currentState == 1 then
+        currentState = 3
+    else
+        currentState = currentState + 1
+    end
+
+    if currentState == 4 then
+        currentState = 1
+    end
+    if currentState == 1 then
+        buttonColor = "#E6E42B"
+        text = "부정확"
+    elseif currentState == 2 then
+        buttonColor = "#F3631C"
+        text = "반대"
+    elseif currentState == 3 then
+        buttonColor = "#DA1917"
+        text = "아님"
+    end
+    checklists[player.color][clue][color] = currentState
+
+    UI.setAttribute(id, 'color', buttonColor)
+    UI.setAttribute(id, 'text', text)
+end
+
+function setUI()
+    local id, buttonColor, text
+    for k,v in pairs(checklists) do
+        for k1,v1 in pairs(v) do
+            for tag,value in pairs(v1) do
+                id = TAGS[k] .. tag .. k1
+                if value == 1 then
+                    buttonColor = "#E6E42B"
+                    text = "부정확"
+                elseif value == 2 then
+                    buttonColor = "#F3631C"
+                    text = "반대"
+                elseif value == 3 then
+                    buttonColor = "#DA1917"
+                    text = "아님"
+                end
+                UI.setAttribute(id, 'color', buttonColor)
+                UI.setAttribute(id, 'text', text)
+            end
+        end
+    end
+end
+
+function adjustChecklist()
+    local columnWidths = {clue = 375, Red = 0, Teal = 0, Purple = 0, Brown = 0, Pink = 0}
+    local tableWidth = 375
+    local stringValue
+
+    for k,v in pairs(seatedPlayers) do
+        columnWidths[v] = 45
+        tableWidth = tableWidth + 45
+    end
+    stringValue = columnWidths.clue .. ' ' .. columnWidths.Red  .. ' ' .. columnWidths.Teal  .. ' ' .. columnWidths.Purple .. ' ' .. columnWidths.Brown  .. ' ' .. columnWidths.Pink
+
+    for k,v in pairs(COLORS_ALL) do
+        UI.setAttribute(v .. 'Table', 'width', tableWidth)
+        UI.setAttribute(v .. 'Table', 'columnWidths', stringValue)
+    end
+end
+
+function fillChecklist()
+    local index
+    for k,v in pairs(seatedPlayers) do
+        index = players[v].clue
+        if index > 24 then
+            index = index - 24
+        end
+        for i = 1,24 do
+            UI.setAttribute(TAGS[v]..TAGS[v]..i, 'color', '#DA1917')
+            UI.setAttribute(TAGS[v]..TAGS[v]..i, 'text', '아님')
+            checklists[v][i][TAGS[v]] = 3
+        end
+        for k1,v1 in pairs(COLORS) do
+            UI.setAttribute(TAGS[v]..TAGS[v1]..index, 'color', '#DA1917')
+            UI.setAttribute(TAGS[v]..TAGS[v1]..index, 'text', '아님')
+            checklists[v][index][TAGS[v1]] = 3
+        end
+        if players[v].clue <= 24 then
+            UI.setAttribute(TAGS[v]..TAGS[v]..index, 'color', '#E6E42B')
+            UI.setAttribute(TAGS[v]..TAGS[v]..index, 'text', '부정확')
+            checklists[v][index][TAGS[v]] = 1
+        else
+            UI.setAttribute(TAGS[v]..TAGS[v]..index, 'color', '#F3631C')
+            UI.setAttribute(TAGS[v]..TAGS[v]..index, 'text', '반대')
+            checklists[v][index][TAGS[v]] = 2
+        end
+        if mode == 'normal' then
+            for k1, v1 in pairs(COLORS) do
+                UI.setAttribute(TAGS[v]..TAGS[v1]..24, 'color', '#DA1917')
+                UI.setAttribute(TAGS[v]..TAGS[v1]..24, 'text', '아님')
+                checklists[v][24][TAGS[v1]] = 3
+            end
+        end
+    end
+    if twoPlayers then
+        for j = 1,2 do
+            index = players[seatedPlayers[j+2]].clue
+            if index > 24 then
+                index = index - 24
+            end
+            for i = 1,24 do
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[seatedPlayers[j+2]]..i, 'color', '#DA1917')
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[seatedPlayers[j+2]]..i, 'text', '아님')
+                checklists[seatedPlayers[j]][i][TAGS[seatedPlayers[j+2]]] = 3
+            end
+            for k1,v1 in pairs(COLORS) do
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[v1]..index, 'color', '#DA1917')
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[v1]..index, 'text', '아님')
+                checklists[seatedPlayers[j]][index][TAGS[v1]] = 3
+            end
+            if players[seatedPlayers[j+2]].clue <= 24 then
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[seatedPlayers[j+2]]..index, 'color', '#E6E42B')
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[seatedPlayers[j+2]]..index, 'text', '부정확')
+                checklists[seatedPlayers[j]][index][TAGS[seatedPlayers[j+2]]] = 1
+            else
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[seatedPlayers[j+2]]..index, 'color', '#F3631C')
+                UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[seatedPlayers[j+2]]..index, 'text', '반대')
+                checklists[seatedPlayers[j]][index][TAGS[seatedPlayers[j+2]]] = 2
+            end
+            if mode == 'normal' then
+                for k1, v1 in pairs(COLORS) do
+                    UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[v1]..24, 'color', '#DA1917')
+                    UI.setAttribute(TAGS[seatedPlayers[j]]..TAGS[v1]..24, 'text', '아님')
+                    checklists[seatedPlayers[j]][24][TAGS[v1]] = 3
+                end
+            end
+        end
+    end
+end
+
+function generateMapUI()
+    local first, last, direction, x, y, step, structure
+    local xstart = 1
+    local ystart = 1
+    for k,v in pairs(COLORS_ALL) do
+        for x = 1,12 do
+            for y = 1,9 do
+                UI.setAttribute(TAGS[v]..x..y, 'image', map[x][y].terrain)
+                UI.setAttribute(TAGS[v]..'s'..x..y, 'image', map[x][y].structType .. map[x][y].structColor)
+                if map[x][y].animal ~= 'N' then
+                    UI.setAttribute(TAGS[v]..'a'..x..y, 'image', map[x][y].animal)
+                    UI.setAttribute(TAGS[v]..'a'..x..y, 'active', true)
+                end
+            end
+        end
+    end
+end
+
+function changeHexColor(player, value, id)
+    if UI.getAttribute(id, 'color') ~= COLOR_DARK then
+        UI.setAttribute(id, 'color', COLOR_DARK)
+    else
+        UI.setAttribute(id, 'color', '#FFFFFF')
+    end
+end
+
+function toggleMap(player, value, id)
+    if not started then
+        player.print('Game has not started.')
+        return
+    end
+    local visible = UI.getAttribute(TAGS[player.color] .. 'col1', 'active')
+    if visible == 'true' then
+        for i = 1,12 do
+            UI.setAttribute(TAGS[player.color] .. 'col' .. i, 'active', 'false')
+        end
+        UI.setAttribute(TAGS[player.color] .. 'Invert', 'active', 'false')
+        UI.setAttribute(TAGS[player.color] .. 'Reset', 'active', 'false')
+    else
+        for i = 1,12 do
+            UI.setAttribute(TAGS[player.color] .. 'col' .. i, 'active', 'true')
+        end
+        UI.setAttribute(TAGS[player.color] .. 'Invert', 'active', 'true')
+        UI.setAttribute(TAGS[player.color] .. 'Reset', 'active', 'true')
+    end
+end
+
+function invertMap(player, value, id)
+    local iden
+    for i = 1, 12 do
+        for j = 1,9 do
+            iden = TAGS[player.color] .. i .. j
+            if UI.getAttribute(iden, 'color') ~= COLOR_DARK then
+                UI.setAttribute(iden, 'color', COLOR_DARK)
+            else
+                UI.setAttribute(iden, 'color', '#FFFFFF')
+            end
+        end
+    end
+end
+
+function resetMap(player, value, id)
+    local iden, index
+    for i = 1, 12 do
+        for j = 1,9 do
+            iden = TAGS[player.color] .. i .. j
+            UI.setAttribute(iden, 'color', '#FFFFFF')
+        end
+    end
+    if players[player.color] ~= nil then
+        local clueNum = players[player.color].clue
+        for i = 1,12 do
+            for j = 1,9 do
+                if cluesTable[clueNum][(i-1)*9+j] == false then
+                    iden = TAGS[player.color] .. i .. j
+                    UI.setAttribute(iden, 'color', COLOR_DARK)
+                end
+            end
+        end
+    end
+    if twoPlayers then
+        if player.color == seatedPlayers[1] then
+            index = 1
+        else
+            index = 2
+        end
+        local clueNum = players[seatedPlayers[index+2]].clue
+        for i = 1,12 do
+            for j = 1,9 do
+                if cluesTable[clueNum][(i-1)*9+j] == false then
+                    iden = TAGS[player.color] .. i .. j
+                    UI.setAttribute(iden, 'color', COLOR_DARK)
+                end
+            end
+        end
+    end
+end
+
+----#include \Cryptid\Global.ttslua
