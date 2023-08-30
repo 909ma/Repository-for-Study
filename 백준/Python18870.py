@@ -19,6 +19,9 @@ for i in range(size):
     print(dic[InputList[i]], end=" ")
 
 """
-5
-2 4 -10 4 -9
+i=[*open(0)][1].split()
+d=dict(zip(sorted({*i},key=int),range(5**9)))
+print(*[d[x]for x in i])
+
+와 이게 머야
 """
