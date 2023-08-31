@@ -7,6 +7,25 @@ Python4949:
     if char in "([":  # 여는 괄호일 때 ---> if문을 이렇게 쓸 수도 있네?
     if not stack:  # 스택이 비어있으면 올바른 괄호가 아님 ---> stack = [] 으로 선언했는데 이렇게 할 수도 있네 
 
+Python10815:
+    ```py
+    def binary_search(arr, target):
+        left, right = 0, len(arr) - 1
+
+        while left <= right:
+            mid = (left + right) // 2
+
+            if arr[mid] == target:
+                return True
+            elif arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return False
+    ```
+    이분법 탐색
+
 Python11650:
     PlusList.sort(reverse=False) ---> 오름차순 정렬
     MinusList.sort(reverse=True) ---> 내림차순 정렬
@@ -99,6 +118,12 @@ Python_더 크게 합치기:
     ```
     나도 max를 잘 활용하자
 
+Python_조건 문자열:
+    ```py
+    def solution(ineq, eq, n, m):
+        return int(eval(str(n)+ineq+eq.replace('!', '')+str(m)))
+    ```
+    eval() 함수와 replace() 배웠네
 ==============================================================================
 환경 설정
 VS Code 인터프리터 변경
