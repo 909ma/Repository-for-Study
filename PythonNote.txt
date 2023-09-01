@@ -126,6 +126,16 @@ Python_n보다 커질 때까지 더하기:
     https://dojang.io/mod/page/view.php?id=2408
     어렵다 어려워
 
+Python_꼬리 문자열:
+    ```py
+    def solution(str_list, ex):
+        return ''.join(filter(lambda x: ex not in x, str_list))
+    ```
+    filter()이 머지
+    filter(조건 함수, 순회 가능한 데이터)
+    신기하네
+    https://www.daleseo.com/python-filter/
+
 Python_대문자로 바꾸기:
     .upper(): 대문자로 바꾸기
     .lower(): 소문자로 바꾸기
