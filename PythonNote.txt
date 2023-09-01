@@ -2,6 +2,10 @@
 백준
 Python1652:
     깊은 복사, 얕은 복사 주의하기
+    ```py
+    import copy
+    upList = copy.deepcopy(inputs)
+    ```
 
 Python4949: 
     if char in "([":  # 여는 괄호일 때 ---> if문을 이렇게 쓸 수도 있네?
