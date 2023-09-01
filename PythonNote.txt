@@ -116,6 +116,16 @@ Python18870:
     내가 실수한 것: dic[temp[i]] != None
 ==============================================================================
 프로그래머스
+Python_n보다 커질 때까지 더하기:
+    ```py
+    def solution(numbers, n):
+        return next(sum(numbers[:i + 1]) for i in range(len(numbers)) if sum(numbers[:i + 1]) > n)
+    ```
+    
+    next(), iter()
+    https://dojang.io/mod/page/view.php?id=2408
+    어렵다 어려워
+
 Python_대문자로 바꾸기:
     .upper(): 대문자로 바꾸기
     .lower(): 소문자로 바꾸기
