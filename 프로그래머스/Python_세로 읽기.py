@@ -12,7 +12,7 @@ def solution(my_string, m, c):
 
 """
 def solution(s, m, c):
-return s[c-1::m]
+    return s[c-1::m]
 
 이런 것도 있네
 슬라이싱 공부 당했다.
