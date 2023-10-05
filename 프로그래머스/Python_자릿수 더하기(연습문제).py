@@ -1,0 +1,27 @@
+def solution(n):
+    return sum([int(str(n)[i]) for i in range(len(str(n)))])
+
+
+# Test Cases
+print(solution(123))
+print(solution(987))
+
+
+"""
+# 문제가 개편되었습니다. 이로 인해 함수 구성이나 테스트케이스가 변경되어, 과거의 코드는 동작하지 않을 수 있습니다.
+# 새로운 함수 구성을 적용하려면 [코드 초기화] 버튼을 누르세요. 단, [코드 초기화] 버튼을 누르면 작성 중인 코드는 사라집니다.
+def sum_digit(number):
+    '''number의 각 자릿수를 더해서 return하세요'''
+    if number < 10:
+        return number
+
+    return number%10 + sum_digit(number//10)
+
+
+
+# 아래는 테스트로 출력해 보기 위한 코드입니다.
+print("결과 : {}".format(sum_digit(123)));
+
+
+잘 하네잉
+"""
