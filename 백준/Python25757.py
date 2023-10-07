@@ -9,3 +9,11 @@ elif Game == "F":
 else:
     X = 3
 print(len(player) // X)
+
+
+"""
+s,*a=open(0);print(len({*a})//'`YFO'.find(s[-2]))
+
+
+이게 무슨 코드야
+"""
