@@ -28,3 +28,20 @@ def solution(balls, share):
 
 있을 거 같더라
 """
+"""
+def comb(n, m):
+    if n == m or m == 0:
+        return 1
+    else:
+        return comb(n - 1, m - 1) + comb(n - 1, m)
+
+def solution(balls, share):
+    return comb(balls, share)
+
+# Test Cases
+print(solution(3, 2))
+print(solution(5, 3))
+
+
+파스칼의 삼각형 어때?
+"""
