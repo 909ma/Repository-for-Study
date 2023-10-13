@@ -92,6 +92,12 @@ Python12871:
         result = (x * y) // GCD(x, y)
         return result
     ```
+    ```
+    def solution(n, m):
+        def gcd(a, b): return b if not a % b else gcd(b, a % b)
+        def lcm(a, b): return a*b//gcd(a, b)
+        return [gcd(n, m), lcm(n, m)]
+    ```
         문자열을 Queue형태로 만드는 방법
     ```py
     from collections import deque
