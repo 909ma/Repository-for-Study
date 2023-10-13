@@ -145,7 +145,7 @@ Python_꼬리 문자열:
 Python_대문자로 바꾸기:
     .upper(): 대문자로 바꾸기
     .lower(): 소문자로 바꾸기
-    .caplitalize(): 첫 글자를 대문자로 바꾸기
+    .capitalize(): 첫 글자를 대문자로 바꾸기
     .title(): 모든 어절의 첫 글자를 대문자로 바꾸기
     ```py
     if i.islower:
